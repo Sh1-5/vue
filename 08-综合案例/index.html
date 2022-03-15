@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="my-app">
+      <template v-if="books.length"
+        ><table>
+          <thead>
+            <th></th>
+            <th>书籍名称</th>
+            <th>出版日期</th>
+            <th>价格</th>
+            <th>购买数量</th>
+            <th>操作</th>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in filterBooks" :key="item.id">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.date}}</td>
+              <td>{{item.price}}</td>
+              <td>
+                <button @click="decrement(item.id)" :disabled="!(item.count-1)">
+                  -</button
+                ><span class="count">{{item.count}}</span
+                ><button @click="increment(item.id)">+</button>
+              </td>
+              <td><button @click="remove(item.id)">移除</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <h1>总价：{{totalPrice}}</h1>
+      </template>
+      <template v-else>
+        <h1>购物车为空</h1>
+      </template>
+    </template>
+    <script src="../js/vue.global.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

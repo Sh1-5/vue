@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="my-app">
+      <ul>
+        <li v-for="(item, index) in movies">{{index}}-{{item}}</li>
+      </ul>
+      <button @click="addMovie">按钮</button>
+    </template>
+    <script src="../js/vue.global.js"></script>
+    <script>
+      Vue.createApp({
+        template: '#my-app',
+        data() {
+          return {
+            movies: ['流浪地球', '星际穿越', '火星救援']
+          }
+        },
+        methods: {
+          addMovie() {
+            this.movies.push('长津湖')
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>

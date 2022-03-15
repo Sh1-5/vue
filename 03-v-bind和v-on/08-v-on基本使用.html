@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="my-app">
+      <button v-on:click="handleClick">按钮</button>
+      <button @click="handleClick">按钮</button>
+      <h1 v-on="{click: h1Click, mousemove: mouseMove}">绑定一个对象</h1>
+    </template>
+    <script src="../js/vue.global.js"></script>
+    <script>
+      Vue.createApp({
+        template: '#my-app',
+        data() {
+          return {}
+        },
+        methods: {
+          handleClick() {
+            console.log('click')
+          },
+          h1Click() {
+            console.log('h1 click')
+          },
+          mouseMove() {
+            console.log('mouse move')
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>
