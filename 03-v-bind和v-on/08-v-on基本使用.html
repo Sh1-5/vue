@@ -11,7 +11,7 @@
     <template id="my-app">
       <button v-on:click="handleClick">按钮</button>
       <button @click="handleClick">按钮</button>
-      <h1 v-on="{click: h1Click, mousemove: mouseMove}">绑定一个对象</h1>
+      <h2 v-on="{click: h2Click, mousemove: mouseMove}">绑定一个对象</h2>
     </template>
     <script src="../js/vue.global.js"></script>
     <script>
@@ -24,8 +24,8 @@
           handleClick() {
             console.log('click')
           },
-          h1Click() {
-            console.log('h1 click')
+          h2Click() {
+            console.log('h2 click')
           },
           mouseMove() {
             console.log('mouse move')
