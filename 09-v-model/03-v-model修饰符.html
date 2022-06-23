@@ -11,14 +11,14 @@
     <template id="my-app">
       <!-- 1.lazy修饰符 -->
       <input type="text" v-model.lazy="message" />
-      <h1>{{message}}</h1>
+      <h2>{{message}}</h2>
       <!-- 2.number修饰符 -->
       <input type="text" v-model.number="number" />
       <button @click="showType">查看类型</button>
-      <h1>{{number}}</h1>
+      <h2>{{number}}</h2>
       <!-- 3.trim修饰符 -->
       <input type="text" v-model.trim="trim" />
-      <h1>{{trim}}</h1>
+      <h2>{{trim}}</h2>
     </template>
     <script src="../js/vue.global.js"></script>
     <script>

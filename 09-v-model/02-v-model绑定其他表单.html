@@ -10,7 +10,7 @@
     <div id="app"></div>
     <template id="my-app">
       <!-- 1.textarea -->
-      <h1>{{message}}</h1>
+      <h2>{{message}}</h2>
       <textarea
         name="intro"
         id="intro"
@@ -19,7 +19,7 @@
         rows="10"
       ></textarea>
       <!-- 2.checkbox -->
-      <h1>{{hobbies}}</h1>
+      <h2>{{hobbies}}</h2>
       <label for="basketball"
         ><input
           id="basketball"
@@ -45,7 +45,7 @@
         />网球</label
       >
       <!-- 3.radio -->
-      <h1>{{sex}}</h1>
+      <h2>{{sex}}</h2>
       <label for="male">
         <input type="radio" id="male" v-model="sex" value="male" />男
       </label>
@@ -53,13 +53,13 @@
         <input type="radio" id="female" v-model="sex" value="female" />女
       </label>
       <!-- 4.select -->
-      <h1>{{fruit}}</h1>
+      <h2>{{fruit}}</h2>
       <select v-model="fruit">
         <option value="apple">苹果</option>
         <option value="orange">橘子</option>
         <option value="banana">香蕉</option>
       </select>
-      <h1>{{fruits}}</h1>
+      <h2>{{fruits}}</h2>
       <select v-model="fruits" multiple size="2">
         <option value="apple">苹果</option>
         <option value="orange">橘子</option>
